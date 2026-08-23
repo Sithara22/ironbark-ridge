@@ -1,0 +1,109 @@
+meter_id,meter_description,period,consumption,unit,source_row
+MTR-01,Processing Plant,2025-01,1029974.7,kWh,2
+MTR-02,CHPP Conveyors,2025-01,417302.3,kWh,3
+MTR-03,Admin & Camp,2025-01,112233.8,kWh,4
+MTR-04,Workshops,2025-01,90197.8,kWh,5
+MTR-05,Water Management,2025-01,150770.2,kWh,6
+MTR-07,Ventilation & Dewatering,2025-01,252822.7,kWh,7
+MTR-01,Processing Plant,2025-02,949085.2,kWh,8
+MTR-02,CHPP Conveyors,2025-02,384524.3,kWh,9
+MTR-03,Admin & Camp,2025-02,118121.2,kWh,10
+MTR-04,Workshops,2025-02,93451.9,kWh,11
+MTR-05,Water Management,2025-02,150976.7,kWh,12
+MTR-07,Ventilation & Dewatering,2025-02,243870.8,kWh,13
+MTR-01,Processing Plant,2025-03,1025508.8,kWh,14
+MTR-02,CHPP Conveyors,2025-03,385704.4,kWh,15
+MTR-03,Admin & Camp,2025-03,124017.4,kWh,16
+MTR-04,Workshops,2025-03,100775.1,kWh,17
+MTR-05,Water Management,2025-03,154447.4,kWh,18
+MTR-07,Ventilation & Dewatering,2025-03,260257.3,kWh,19
+MTR-01,Processing Plant,2025-04,974884.0,kWh,20
+MTR-02,CHPP Conveyors,2025-04,413117.8,kWh,21
+MTR-03,Admin & Camp,2025-04,122820.8,kWh,22
+MTR-04,Workshops,2025-04,101320.6,kWh,23
+MTR-05,Water Management,2025-04,150930.3,kWh,24
+MTR-07,Ventilation & Dewatering,2025-04,271277.3,kWh,25
+MTR-01,Processing Plant,2025-05,1000832.1,kWh,26
+MTR-02,CHPP Conveyors,2025-05,399755.6,kWh,27
+MTR-03,Admin & Camp,2025-05,117597.4,kWh,28
+MTR-04,Workshops,2025-05,91307.6,kWh,29
+MTR-05,Water Management,2025-05,142676.7,kWh,30
+MTR-07,Ventilation & Dewatering,2025-05,245567.5,kWh,31
+MTR-01,Processing Plant,2025-06,1034760.2,kWh,32
+MTR-02,CHPP Conveyors,2025-06,401013.3,kWh,33
+MTR-03,Admin & Camp,2025-06,121540.5,kWh,34
+MTR-04,Workshops,2025-06,96061.1,kWh,35
+MTR-05,Water Management,2025-06,145032.1,kWh,36
+MTR-07,Ventilation & Dewatering,2025-06,250817.9,kWh,37
+MTR-01,Processing Plant,2025-07,971460.4,kWh,38
+MTR-02,CHPP Conveyors,2025-07,406522.8,kWh,39
+MTR-03,Admin & Camp,2025-07,118375.8,kWh,40
+MTR-04,Workshops,2025-07,91413.5,kWh,41
+MTR-05,Water Management,2025-07,149294.3,kWh,42
+MTR-07,Ventilation & Dewatering,2025-07,252097.3,kWh,43
+MTR-01,Processing Plant,2025-08,967483.2,kWh,44
+MTR-02,CHPP Conveyors,2025-08,400722.3,kWh,45
+MTR-03,Admin & Camp,2025-08,119617.1,kWh,46
+MTR-04,Workshops,2025-08,99887.2,kWh,47
+MTR-05,Water Management,2025-08,155134.7,kWh,48
+MTR-07,Ventilation & Dewatering,2025-08,244199.2,kWh,49
+MTR-01,Processing Plant,2025-09,924366.2,kWh,50
+MTR-02,CHPP Conveyors,2025-09,420239.0,kWh,51
+MTR-03,Admin & Camp,2025-09,114434.1,kWh,52
+MTR-04,Workshops,2025-09,99007.0,kWh,53
+MTR-05,Water Management,2025-09,155331.7,kWh,54
+MTR-07,Ventilation & Dewatering,2025-09,274790.9,kWh,55
+MTR-01,Processing Plant,2025-10,1031214.0,kWh,56
+MTR-02,CHPP Conveyors,2025-10,400435.0,kWh,57
+MTR-03,Admin & Camp,2025-10,119366.9,kWh,58
+MTR-04,Workshops,2025-10,91180.8,kWh,59
+MTR-05,Water Management,2025-10,148804.2,kWh,60
+MTR-07,Ventilation & Dewatering,2025-10,277.0,kWh,61
+MTR-01,Processing Plant,2025-11,1007231.5,kWh,62
+MTR-02,CHPP Conveyors,2025-11,403798.4,kWh,63
+MTR-03,Admin & Camp,2025-11,119570.1,kWh,64
+MTR-04,Workshops,2025-11,101886.7,kWh,65
+MTR-05,Water Management,2025-11,147947.9,kWh,66
+MTR-07,Ventilation & Dewatering,2025-11,255.5,kWh,67
+MTR-01,Processing Plant,2025-12,1020016.0,kWh,68
+MTR-02,CHPP Conveyors,2025-12,427976.8,kWh,69
+MTR-03,Admin & Camp,2025-12,120810.3,kWh,70
+MTR-04,Workshops,2025-12,100421.2,kWh,71
+MTR-05,Water Management,2025-12,157081.1,kWh,72
+MTR-07,Ventilation & Dewatering,2025-12,266.7,kWh,73
+MTR-01,Processing Plant,2026-01,983621.2,kWh,74
+MTR-02,CHPP Conveyors,2026-01,418381.8,kWh,75
+MTR-03,Admin & Camp,2026-01,116734.7,kWh,76
+MTR-04,Workshops,2026-01,94143.0,kWh,77
+MTR-05,Water Management,2026-01,149076.1,kWh,78
+MTR-07,Ventilation & Dewatering,2026-01,248.4,kWh,79
+MTR-01,Processing Plant,2026-02,940787.2,kWh,80
+MTR-02,CHPP Conveyors,2026-02,435696.2,kWh,81
+MTR-03,Admin & Camp,2026-02,117773.2,kWh,82
+MTR-04,Workshops,2026-02,92324.7,kWh,83
+MTR-05,Water Management,2026-02,144287.4,kWh,84
+MTR-07,Ventilation & Dewatering,2026-02,244.6,kWh,85
+MTR-01,Processing Plant,2026-03,359539.5,kWh,86
+MTR-02,CHPP Conveyors,2026-03,135486.9,kWh,87
+MTR-03,Admin & Camp,2026-03,42866.2,kWh,88
+MTR-04,Workshops,2026-03,35176.4,kWh,89
+MTR-05,Water Management,2026-03,56057.7,kWh,90
+MTR-07,Ventilation & Dewatering,2026-03,85.1,kWh,91
+MTR-01,Processing Plant,2026-04,957604.1,kWh,92
+MTR-02,CHPP Conveyors,2026-04,425286.1,kWh,93
+MTR-03,Admin & Camp,2026-04,111904.9,kWh,94
+MTR-04,Workshops,2026-04,94343.1,kWh,95
+MTR-05,Water Management,2026-04,144812.6,kWh,96
+MTR-07,Ventilation & Dewatering,2026-04,272.1,kWh,97
+MTR-01,Processing Plant,2026-05,1017194.6,kWh,98
+MTR-02,CHPP Conveyors,2026-05,427739.1,kWh,99
+MTR-03,Admin & Camp,2026-05,112474.7,kWh,100
+MTR-04,Workshops,2026-05,95162.3,kWh,101
+MTR-05,Water Management,2026-05,150103.1,kWh,102
+MTR-07,Ventilation & Dewatering,2026-05,266.4,kWh,103
+MTR-01,Processing Plant,2026-06,943989.1,kWh,104
+MTR-02,CHPP Conveyors,2026-06,406797.0,kWh,105
+MTR-03,Admin & Camp,2026-06,114447.0,kWh,106
+MTR-04,Workshops,2026-06,99340.3,kWh,107
+MTR-05,Water Management,2026-06,150913.2,kWh,108
+MTR-07,Ventilation & Dewatering,2026-06,261.2,kWh,109

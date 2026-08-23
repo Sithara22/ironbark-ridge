@@ -1,0 +1,43 @@
+incident_id,incident_date,location,type_code,severity,description,source_row,incident_date_raw,severity_raw
+INC-2025-002,2025-01-22,Haul Fleet,DUS,1,"Dust exceedance recorded at crusher during shift change, fogger offline.",2,22/01/2025,Low
+INC-2025-001,2025-01-26,Open Cut - South Pit,VEH,1,"Service truck tyre blowout on access road, controlled stop, no injury.",3,26/01/2025,1
+INC-2025-003,2025-02-10,Light Vehicles,VEH,1,"Service truck tyre blowout on access road, controlled stop, no injury.",4,10/02/2025,Low
+INC-2025-004,2025-02-14,Open Cut - South Pit,EQP,1,"Dozer track tension failure, machine stood down for maintenance.",5,14/02/2025,Low
+INC-2025-005,2025-03-28,Site Services,SLP,2,"Operator slipped on wet stairs at wash plant, grazed elbow, first aid administered.",6,28/03/2025,2
+INC-2025-006,2025-03-28,Open Cut - North Pit,SLP,1,"Trip on uneven walkway grating near thickener, no injury, hazard tagged.",7,28/03/2025,1
+INC-2025-007,2025-03-28,Open Cut - North Pit,DUS,2,"Worker reported respiratory irritation at ROM pad, RPE compliance check completed.",8,28/03/2025,2
+INC-2025-009,2025-04-17,Haul Fleet,ENV,2,"Hydrocarbon sheen observed in V-drain near fuel farm, spill kit deployed.",9,17/04/2025,2
+INC-2025-008,2025-04-25,Haul Fleet,VEH,3,"Haul truck and water cart interaction on ramp 4, positive comms not obtained before pass.",10,25/04/2025,3
+INC-2025-010,2025-05-08,Processing Plant,ENV,1,"Hydrocarbon sheen observed in V-drain near fuel farm, spill kit deployed.",11,08/05/2025,Low
+INC-2025-118,2025-05-22,Haul Fleet,SLP,1,"Worker fell from ladder in workshop, fractured forearm, transported to Mater Hospital for surgery.",12,22/05/2025,1
+INC-2025-011,2025-06-02,Processing Plant,VEH,1,"LV exceeded speed limit on haul road, detected by IVMS, driver coached.",13,02/06/2025,1
+INC-2025-011,2025-06-19,Processing Plant,ENV,1,"Minor coolant leak from pump P-118, contained in bunding.",14,19/06/2025,Low
+INC-2025-012,2025-07-03,Open Cut - North Pit,VEH,1,"LV exceeded speed limit on haul road, detected by IVMS, driver coached.",15,03/07/2025,1
+INC-2025-127,2025-07-08,Open Cut - South Pit,OTH,1,"Operator raised concerns about repeated verbal abuse from supervisor over several weeks, feeling anxious before shift.",16,08/07/2025,1
+INC-2025-013,2025-08-04,Site Services,ENV,1,"Hydrocarbon sheen observed in V-drain near fuel farm, spill kit deployed.",17,04/08/2025,Low
+INC-2025-014,2025-08-26,Open Cut - North Pit,DUS,2,"Dust exceedance recorded at crusher during shift change, fogger offline.",18,26/08/2025,2
+INC-2025-016,2025-09-23,Light Vehicles,VEH,1,"Service truck tyre blowout on access road, controlled stop, no injury.",19,23/09/2025,1
+INC-2025-015,2025-09-27,Open Cut - South Pit,ENV,2,"Hydrocarbon sheen observed in V-drain near fuel farm, spill kit deployed.",20,27/09/2025,2
+INC-2025-141,2025-09-30,Site Services,EQP,1,"Fitter's hand caught in pinch point during belt maintenance, two fingers lacerated requiring sutures, LTI recorded.",21,30/09/2025,1
+INC-2025-017,2025-10-03,Open Cut - South Pit,ENV,2,"Hydrocarbon sheen observed in V-drain near fuel farm, spill kit deployed.",22,03/10/2025,2
+INC-2025-018,2025-11-24,Haul Fleet,EQP,1,"Dozer track tension failure, machine stood down for maintenance.",23,24/11/2025,1
+INC-2025-019,2025-12-10,Open Cut - North Pit,VEH,1,"Service truck tyre blowout on access road, controlled stop, no injury.",24,10/12/2025,1
+INC-2025-152,2025-12-11,Open Cut - North Pit,OTH,2,"Worker disclosed feeling overwhelmed by sustained overtime and understaffing on night shift, requested confidential support.",25,11/12/2025,2
+INC-2026-020,2026-01-14,Light Vehicles,EQP,2,"Hydraulic hose failure on excavator EX-214, approx 40L oil released to hardstand, contained.",26,14/01/2026,2
+INC-2026-109,2026-02-03,Open Cut - South Pit,OTH,1,"Crew member reported exclusion from toolbox talks and rostering decisions after raising a safety concern, describes ongoing stress and poor sleep.",27,03/02/2026,1
+INC-2026-021,2026-02-04,Haul Fleet,VEH,2,"Haul truck and water cart interaction on ramp 4, positive comms not obtained before pass.",28,04/02/2026,Medium
+INC-2026-022,2026-02-18,Light Vehicles,ENV,2,"Sediment dam level exceeded trigger after storm event, pumping commenced.",29,18/02/2026,2
+INC-2026-025,2026-03-06,Open Cut - North Pit,VEH,1,"LV exceeded speed limit on haul road, detected by IVMS, driver coached.",30,06/03/2026,1
+INC-2026-131,2026-03-06,Site Services,ELE,3,Regional substation failure caused loss of grid supply to site. Backup diesel generators run continuously for approximately three weeks while repairs completed. Refuelling contractors on site daily.,31,06/03/2026,3
+INC-2026-024,2026-03-20,Light Vehicles,VEH,1,"Light vehicle reversed into bund wall near go-line. No injury, minor panel damage.",32,20/03/2026,1
+INC-2026-023,2026-03-23,Haul Fleet,EQP,2,"Hydraulic hose failure on excavator EX-214, approx 40L oil released to hardstand, contained.",33,23/03/2026,2
+INC-2026-134,2026-03-24,Haul Fleet,OTH,2,Multiple crews reporting fatigue after extended shifts covering generator operations and manual restarts during the March power outage.,34,24/03/2026,2
+INC-2026-026,2026-04-03,Light Vehicles,DUS,1,"Dust exceedance recorded at crusher during shift change, fogger offline.",35,03/04/2026,Low
+INC-2026-028,2026-04-13,Open Cut - North Pit,VEH,1,"Light vehicle reversed into bund wall near go-line. No injury, minor panel damage.",36,13/04/2026,Low
+INC-2026-027,2026-04-26,Light Vehicles,EQP,1,"Dozer track tension failure, machine stood down for maintenance.",37,26/04/2026,Low
+INC-2026-029,2026-05-12,Open Cut - North Pit,VEH,1,"LV exceeded speed limit on haul road, detected by IVMS, driver coached.",38,12/05/2026,1
+INC-2026-031,2026-05-22,Light Vehicles,DUS,2,"Worker reported respiratory irritation at ROM pad, RPE compliance check completed.",39,22/05/2026,2
+INC-2026-030,2026-05-26,Open Cut - South Pit,DUS,2,"Dust exceedance recorded at crusher during shift change, fogger offline.",40,26/05/2026,2
+INC-2026-032,2026-06-11,Processing Plant,VEH,1,"Service truck tyre blowout on access road, controlled stop, no injury.",41,11/06/2026,1
+INC-2026-033,2026-06-11,Open Cut - South Pit,EQP,1,"Dozer track tension failure, machine stood down for maintenance.",42,11/06/2026,Low
+INC-2026-034,2026-06-25,Site Services,EQP,2,"Dropped object (hand tool) from CHPP walkway, exclusion zone in place, no injury.",43,25/06/2026,2
