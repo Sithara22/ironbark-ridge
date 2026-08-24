@@ -9,9 +9,14 @@ import { incidentsRouter } from "./routes/incidents.js";
 
 export const app = express();
 
+const allowedOrigins = [
+  "http://localhost:5173",
+  process.env.FRONTEND_URL,
+].filter(Boolean) as string[];
+
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: allowedOrigins,
   }),
 );
 
@@ -21,4 +26,7 @@ app.use("/api/health", healthRouter);
 app.use("/api/emissions", emissionsRouter);
 app.use("/api/incidents", incidentsRouter);
 app.use("/api/data-quality", dataQualityRouter);
-app.use("/api/incidents/ai-analysis", incidentAiRouter);
+app.use(
+  "/api/incidents/ai-analysis",
+  incidentAiRouter,
+);
