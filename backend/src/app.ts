@@ -1,3 +1,4 @@
+import cors from "cors";
 import express from "express";
 
 import { dataQualityRouter } from "./routes/data-quality.js";
@@ -7,6 +8,12 @@ import { incidentAiRouter } from "./routes/incident-ai.js";
 import { incidentsRouter } from "./routes/incidents.js";
 
 export const app = express();
+
+app.use(
+  cors({
+    origin: "http://localhost:5173",
+  }),
+);
 
 app.use(express.json());
 
