@@ -4,7 +4,6 @@ from utils import (RAW_DATA_DIRECTORY, create_quality_issue, normalize_column_na
 
 
 SOURCE_FILE = "incident_register.csv"
-DUPLICATE_CONTENT_THRESHOLD_DAYS = 30
 
 SEVERITY_MAPPING = {
     "low": 1,
@@ -37,74 +36,58 @@ def add_duplicate_id_issues(dataframe: pd.DataFrame, quality_issues: list[dict])
         )
 
 
-def add_repeated_description_issues(dataframe: pd.DataFrame, quality_issues: list[dict]) -> None:
-    repeated_description_mask = dataframe.duplicated(subset=["description"],keep=False)
+def add_possible_duplicate_content_issues(dataframe: pd.DataFrame, quality_issues: list[dict]) -> None:
+    duplicate_columns = [
+        "incident_date",
+        "location",
+        "type_code",
+        "description",
+    ]
 
-    repeated_records = dataframe[repeated_description_mask].copy()
+    duplicate_content_mask = dataframe.duplicated(subset=duplicate_columns, keep=False)
 
-    if repeated_records.empty:
-        return
+    duplicate_records = dataframe[duplicate_content_mask]
 
-    for description, group in repeated_records.groupby("description"):
-        if len(group) < 2:
+    for _, record in duplicate_records.iterrows():
+        matching_records = duplicate_records[
+            (duplicate_records["incident_date"] == record["incident_date"])
+            & (duplicate_records["location"] == record["location"])
+            & (duplicate_records["type_code"] == record["type_code"])
+            & (duplicate_records["description"] == record["description"])
+            & (duplicate_records["incident_id"] != record["incident_id"])
+        ]
+
+        if matching_records.empty:
             continue
 
-        group = group.sort_values("incident_date_parsed")
-
-        incident_dates = group["incident_date_parsed"].dropna()
-
-        if incident_dates.empty:
-            continue
-
-        first_date = incident_dates.min()
-        last_date = incident_dates.max()
-        date_span_days = (last_date - first_date).days
-
-        incident_ids = sorted(
-            group["incident_id"]
+        related_incident_ids = (
+            matching_records["incident_id"]
             .astype(str)
-            .unique()
+            .drop_duplicates()
             .tolist()
         )
 
-        if date_span_days <= DUPLICATE_CONTENT_THRESHOLD_DAYS:
-            issue_code = "POSSIBLE_DUPLICATE_CONTENT"
-            severity = "warning"
-            action = "flagged"
-            message = (
-                "Identical incident descriptions occur within "
-                f"{date_span_days} days. Related incident IDs: "
-                f"{', '.join(incident_ids)}."
+        quality_issues.append(
+            create_quality_issue(
+                source_file=SOURCE_FILE,
+                source_row=int(record["source_row"]),
+                record_id=str(record["incident_id"]),
+                field="description",
+                issue_code="POSSIBLE_DUPLICATE_CONTENT",
+                severity="warning",
+                original_value=record["description"],
+                action="flagged",
+                message=(
+                    "Another incident has the same date, location, type, "
+                    "and description. Related incident IDs: "
+                    f"{', '.join(related_incident_ids)}."
+                ),
             )
-        else:
-            issue_code = "RECURRING_INCIDENT_TYPE"
-            severity = "info"
-            action = "retained"
-            message = (
-                "Identical incident description recurs across "
-                f"{date_span_days} days in {len(group)} records. "
-                f"Related incident IDs: {', '.join(incident_ids)}."
-            )
-
-        for _, record in group.iterrows():
-            quality_issues.append(
-                create_quality_issue(
-                    source_file=SOURCE_FILE,
-                    source_row=int(record["source_row"]),
-                    record_id=str(record["incident_id"]),
-                    field="description",
-                    issue_code=issue_code,
-                    severity=severity,
-                    original_value=description,
-                    action=action,
-                    message=message,
-                )
-            )
+        )
 
 
 def normalize_severity(dataframe: pd.DataFrame, quality_issues: list[dict]) -> pd.DataFrame:
     dataframe = dataframe.copy()
-
     dataframe["severity_raw"] = dataframe["severity"].astype(str)
 
     dataframe["severity"] = (
@@ -139,17 +122,17 @@ def normalize_incident_dates(dataframe: pd.DataFrame, quality_issues: list[dict]
 
     dataframe["incident_date_raw"] = dataframe["incident_date"]
 
-    dataframe["incident_date_parsed"] = pd.to_datetime(
+    parsed_dates = pd.to_datetime(
         dataframe["incident_date_raw"],
         format="%d/%m/%Y",
         errors="coerce",
     )
 
-    invalid_date_records = dataframe[
-        dataframe["incident_date_parsed"].isna()
-    ]
+    invalid_date_mask = parsed_dates.isna()
 
-    for _, record in invalid_date_records.iterrows():
+    for index in dataframe[invalid_date_mask].index:
+        record = dataframe.loc[index]
+
         quality_issues.append(
             create_quality_issue(
                 source_file=SOURCE_FILE,
@@ -164,7 +147,7 @@ def normalize_incident_dates(dataframe: pd.DataFrame, quality_issues: list[dict]
             )
         )
 
-    dataframe["incident_date"] = (dataframe["incident_date_parsed"].dt.strftime("%Y-%m-%d"))
+    dataframe["incident_date"] = parsed_dates.dt.strftime("%Y-%m-%d")
 
     return dataframe
 
@@ -175,7 +158,6 @@ def clean_incidents() -> tuple[pd.DataFrame, list[dict]]:
     dataframe = pd.read_csv(file_path, dtype={"severity": str})
 
     dataframe["source_row"] = dataframe.index + 2
-
     dataframe = normalize_column_names(dataframe)
 
     quality_issues = []
@@ -184,10 +166,8 @@ def clean_incidents() -> tuple[pd.DataFrame, list[dict]]:
 
     add_duplicate_id_issues(dataframe, quality_issues)
 
-    add_repeated_description_issues(dataframe, quality_issues)
+    add_possible_duplicate_content_issues(dataframe, quality_issues)
 
     dataframe = normalize_severity(dataframe, quality_issues)
-
-    dataframe = dataframe.drop(columns=["incident_date_parsed"])
 
     return dataframe, quality_issues
