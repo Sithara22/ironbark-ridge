@@ -1,5 +1,6 @@
 import express from "express";
 
+import { dataQualityRouter } from "./routes/data-quality.js";
 import { emissionsRouter } from "./routes/emissions.js";
 import { healthRouter } from "./routes/health.js";
 import { incidentsRouter } from "./routes/incidents.js";
@@ -11,3 +12,4 @@ app.use(express.json());
 app.use("/api/health", healthRouter);
 app.use("/api/emissions", emissionsRouter);
 app.use("/api/incidents", incidentsRouter);
+app.use("/api/data-quality", dataQualityRouter);
